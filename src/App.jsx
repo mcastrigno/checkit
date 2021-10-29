@@ -1,12 +1,13 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import logo from './logo.svg'
 import './App.css'
-import List from './list/list'
 import Checkbox from './list/checkbox'
+import ListRow from './list/listrow'
 
 function App() {
   return (
     <>
+      <ListRow />
       <Checkbox />
       <div className="App">
         <header className="Appheader">
