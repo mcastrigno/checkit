@@ -8,7 +8,6 @@ function App() {
   return (
     <>
       <ListRow />
-      <Checkbox />
       <div className="App">
         <header className="Appheader">
           <img src={logo} className="App-logo" alt="logo" />

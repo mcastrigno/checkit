@@ -1,19 +1,29 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import cssMod from './checkbox.module.css'
+import PropTypes from 'prop-types'
 
-const consoleOut = () => {
-  console.log('you clicked me')
-}
-const Checkbox = () => {
+const Checkbox = (props) => {
+  const [taskItem, setTaskItem] = useState('')
+  const [checkBox, setCheckBox] = useState(false)
+
+  useEffect(() => {
+    setTaskItem(props.task)
+  }, [])
+
+  const onChange = () => {
+    console.log(`You clicked this task: ${taskItem}`)
+  }
   return (
     <>
-      <div>Checkbox</div>
       <label className={`${cssMod.script}`}>
-        <input type="checkbox" onChange={consoleOut} />
+        <input type="checkbox" defaultChecked={checkBox} onChange={onChange} />
         <span className={`${cssMod.box}`}></span>
       </label>
     </>
   )
 }
 
+Checkbox.propTypes = {
+  task: PropTypes.string,
+}
 export default Checkbox

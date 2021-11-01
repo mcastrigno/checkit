@@ -8,23 +8,20 @@ const ListRow = () => {
     const response = await fetch('/tasklist.json')
     const tasks = await response.json()
     setAllTasks(tasks)
-    console.log(tasks)
-    console.log(`${tasks} tasks from api`)
   }
 
   useEffect(() => {
     fetchTasks()
   }, [])
 
-  console.log('All tasks')
   return (
     <>
-      <div>useEffect</div>
-      <ul>
-        {allTasks.map((allTasks) => (
-          <li key={allTasks.id}>{allTasks.description}</li>
-        ))}
-      </ul>
+      {allTasks.map((allTasks) => (
+        <div key={allTasks.id}>
+          {allTasks.description}
+          <Checkbox task={allTasks.description} />
+        </div>
+      ))}
     </>
   )
 }
