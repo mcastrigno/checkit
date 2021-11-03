@@ -17,6 +17,7 @@ const ServicePlan = () => {
   // the service record is an object with some key value pairs one of which is an
   // an array of objects which for each one a checkbox is created
 
+  console.log(allServices)
   return (
     <>
       {allServices.map((allServices) => (

@@ -3,6 +3,7 @@ import Checkbox from './checkbox'
 import PropTypes from 'prop-types'
 
 const EventRow = (props) => {
+  console.log(props.service)
   return (
     <>
       {props.service.map((events) => (
@@ -14,7 +15,7 @@ const EventRow = (props) => {
   )
 }
 EventRow.propTypes = {
-  service: PropTypes.object,
+  service: PropTypes.array,
 }
 
 export default EventRow
