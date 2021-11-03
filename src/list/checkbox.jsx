@@ -11,12 +11,18 @@ const Checkbox = (props) => {
   }, [])
 
   const onChange = () => {
+    setCheckBox(!checkBox)
     console.log(`You clicked this task: ${taskItem}`)
   }
   return (
     <>
       <label className={`${cssMod.script}`}>
-        <input type="checkbox" defaultChecked={checkBox} onChange={onChange} />
+        <input
+          type="checkbox"
+          checked={checkBox}
+          value={checkBox}
+          onChange={onChange}
+        />
         <span className={`${cssMod.box}`}></span>
       </label>
     </>

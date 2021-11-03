@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "description": "Clean toilet",
+        "events":
+            [
+                {
+                    "eventid": 1,
+                    "taskid": 1,
+                    "status": "notDone",
+                    "date": "2021-11-03"
+                },
+                {
+                    "eventid": 2,
+                    "taskid": 1,
+                    "status": "notDone",
+                    "date": "2021-10-03"
+                }
+            ]
+    }
+        
+    ,
+    {
+        "id": 2,
+        "description": "Clean floor",
+        "events":
+            [
+                {
+                    "eventid": 1,
+                    "taskid": 1,
+                    "status": "notDone",
+                    "date": "2021-11-03"
+                },
+                {
+                    "eventid": 2,
+                    "taskid": 1,
+                    "status": "notDone",
+                    "date": "2021-10-03"
+                }
+            ]
+    }
+]
