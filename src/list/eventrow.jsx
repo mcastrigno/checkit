@@ -1,14 +1,15 @@
 import React, { useState, useEffect } from 'react'
-import Checkbox from './checkbox'
+import EventBox from './eventBox'
 import PropTypes from 'prop-types'
+import cssMod from './eventrow.module.css'
 
 const EventRow = (props) => {
   console.log(props.service)
   return (
     <>
       {props.service.map((events) => (
-        <div key={events.eventid}>
-          <Checkbox events={events} />
+        <div className={`${cssMod.eventBox}`} key={events.eventid}>
+          <EventBox events={events} />
         </div>
       ))}
     </>

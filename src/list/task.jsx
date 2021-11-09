@@ -7,7 +7,7 @@ const Task = (props) => {
   // eslint-disable-next-line react/prop-types
   console.log(props.task)
   // eslint-disable-next-line react/prop-types
-  return <div>{props.task}</div>
+  return <div className={`${cssMod.taskBox}`}>{props.task}</div>
 }
 
 Task.propTypes = {

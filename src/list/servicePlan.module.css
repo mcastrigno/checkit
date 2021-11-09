@@ -1,0 +1,29 @@
+.wrapper {
+
+    height: 2rem ;
+}
+.planWrapper{
+    display:flex;
+    flex-wrap: nowrap;
+}
+.eventWrapper {
+display:inline-flex; 
+height: 2rem ;
+}
+
+.taskColumnWrapper {
+    padding: .3rem;
+    position: relative;
+    top: 0px;
+
+display: inline-block
+}
+
+.eventColumnWrapper {
+width: 400px;
+overflow-x:scroll;
+display:inline-flexbox; 
+flex-wrap: nowrap;    
+padding: .3rem;
+}
+

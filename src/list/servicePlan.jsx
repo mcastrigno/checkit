@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import EventRow from './eventrow'
 import Task from './task'
+import cssMod from './servicePlan.module.css'
 
 const ServicePlan = () => {
   const [allServices, setAllServices] = useState([])
@@ -19,14 +20,22 @@ const ServicePlan = () => {
 
   console.log(allServices)
   return (
-    <>
-      {allServices.map((allServices) => (
-        <div key={allServices.id}>
-          <Task task={allServices.description} />
-          <EventRow service={allServices.events} />
-        </div>
-      ))}
-    </>
+    <div className={`${cssMod.planWrapper}`}>
+      <div className={`${cssMod.taskColumnWrapper}`}>
+        {allServices.map((allServices) => (
+          <div className={`${cssMod.wrapper}`} key={allServices.id}>
+            <Task task={allServices.description} />
+          </div>
+        ))}
+      </div>
+      <div className={`${cssMod.eventColumnWrapper}`}>
+        {allServices.map((allServices) => (
+          <div className={`${cssMod.eventWrapper}`} key={allServices.id}>
+            <EventRow service={allServices.events} />
+          </div>
+        ))}
+      </div>
+    </div>
   )
 }
 
